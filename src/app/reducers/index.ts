@@ -11,7 +11,7 @@ export const reducers: ActionReducerMap<any> = {
 };
 
 // Select part of the state on which to create feature selectors
-export const selectItemState = createFeatureSelector<fromItem.State>('items');
+export const selectItemState = createFeatureSelector<fromItem.State>('item');
 
 // Define feature selectors on part of selected state
 export const { selectAll: selectAllItems } = fromItem.itemAdapter.getSelectors(selectItemState);

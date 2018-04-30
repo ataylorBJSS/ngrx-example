@@ -19,8 +19,22 @@ export class ReadComponent implements OnInit {
   constructor(private store: Store<AppState>) {
   }
 
+  addOne(item) {
+    const qty = item.qty += 1;
+    this.store.dispatch(new ItemActions.UpdateItem({ item: { ...item, qty } }));
+  }
+
+  removeOne(item) {
+    const qty = item.qty -= 1;
+    if (qty === 0) {
+      this.delItem(item.id);
+    } else {
+      this.store.dispatch(new ItemActions.UpdateItem({ item: { ...item, qty } }));
+    }
+  }
+
   delItem(id) {
-    this.store.dispatch(new ItemActions.RemoveItem(id));
+    this.store.dispatch(new ItemActions.RemoveItem({ id }));
   }
 
   ngOnInit() {

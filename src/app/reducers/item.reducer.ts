@@ -15,9 +15,11 @@ export const initialState: State = itemAdapter.getInitialState();
 export function reducer(state: State = initialState, action: ItemActions.Actions) {
   switch (action.type) {
     case ItemActions.actionType.ADD_ITEM:
-      return itemAdapter.addOne(action.payload, state);
+      return itemAdapter.addOne(action.payload.item, state);
     case ItemActions.actionType.REMOVE_ITEM:
-      return itemAdapter.removeOne(action.payload, state);
+      return itemAdapter.removeOne(action.payload.id, state);
+    case ItemActions.actionType.UPDATE_ITEM:
+      return itemAdapter.updateOne(action.payload.item, state);
     default:
       return state;
   }

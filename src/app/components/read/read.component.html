@@ -1,10 +1,24 @@
 <div class="right" *ngIf="items$">
   <h3>Items</h3>
-  <ul>
-    <li *ngFor="let item of items$ | async">
-      <p>Item: {{ item.name }}</p>
-      <p>Size: {{ item.size }}</p>
-      <button (click)="delItem(item.id)">Delete</button>
-    </li>
-  </ul>
+  <table>
+    <tr>
+      <th>Item</th>
+      <th>Size</th>
+      <th>Quantity</th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let item of items$ | async">
+      <td>{{ item.name }}</td>
+      <td>{{ item.size }}</td>
+      <td>{{ item.qty }}</td>
+      <td>
+        <button (click)="addOne(item)">Add one</button>
+        <button *ngIf="item.qty > 1" (click)="removeOne(item)">Remove one</button>
+      </td>
+      <td>
+        <button (click)="delItem(item.id)">Delete</button>
+      </td>
+    </tr>
+  </table>
 </div>

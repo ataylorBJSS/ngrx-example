@@ -10,7 +10,7 @@ import { reducer } from './reducers/item.reducer';
 @NgModule({
   imports: [
     CommonModule,
-    StoreModule.forFeature('items', reducer)
+    StoreModule.forFeature('item', reducer)
   ],
   declarations: []
 })

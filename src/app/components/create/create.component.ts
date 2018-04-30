@@ -22,7 +22,7 @@ export class CreateComponent {
 
   addItem(name, size) {
     const id = this.generateUUID();
-    this.store.dispatch(new ItemActions.AddItem({ id, name, size }));
+    this.store.dispatch(new ItemActions.AddItem({ item: { id, name, size, qty: 1 } }));
   }
 
 }
