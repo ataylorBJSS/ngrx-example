@@ -22,7 +22,15 @@ Entity State adapter for managing record collections.
 This removes boilerplate code from your reducers by providing an adapter to performant functions.
 I'm not sure if the selectors are cached yet, it would make sense...right?
 
+## ngrx/effects
+[Github] (https://github.com/ngrx/platform/tree/master/docs/effects)
+RxJS powered side effect model for @ngrx/store
+
+Example coming soon!
+
 ## Development server
+
+Before getting started, install `@angular/cli` globally: `npm install -g @angular/cli`. This will add the `ng` command to your path.
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
@@ -45,5 +53,3 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-
