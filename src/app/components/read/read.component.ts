@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Store } from '@ngrx/store';
 
-import { IFault } from '../../models/fault.model';
-import { selectAllFaults } from '../../reducers';
-import * as FaultActions from '../../actions/fault.actions';
+import { Item } from '../../models/item.model';
+import { selectAllItems } from '../../reducers';
+import * as ItemActions from '../../actions/item.actions';
 import { AppState } from '../../app.state';
 
 @Component({
@@ -14,17 +14,17 @@ import { AppState } from '../../app.state';
 })
 export class ReadComponent implements OnInit {
 
-  faults$: any;
+  items$: any;
 
   constructor(private store: Store<AppState>) {
   }
 
-  delFault(id) {
-    this.store.dispatch(new FaultActions.RemoveFauilt(id));
+  delItem(id) {
+    this.store.dispatch(new ItemActions.RemoveItem(id));
   }
 
   ngOnInit() {
-    this.faults$ = this.store.select(selectAllFaults);
+    this.items$ = this.store.select(selectAllItems);
   }
 
 }

@@ -1,7 +1,14 @@
 <div class="left">
+  <label for="item">Item:</label>
+  <select name="item" id="item" #item>
+    <option value="t-shirt">T-Shirt</option>
+    <option value="shirt">Shirt</option>
+    <option value="jumper">Jumper</option>
+    <option value="coat">coat</option>
+  </select>
 
-  <input type="text" placeholder="section" #section>
-  <input type="text" placeholder="name" #name>
-
-  <button (click)="addFault(section.value ,name.value)">Add a Fault</button>
+  <label for="size">Size:</label>
+  <button (click)="addItem(item.value ,'s')">Add Small</button>
+  <button (click)="addItem(item.value ,'m')">Add Medium</button>
+  <button (click)="addItem(item.value ,'l')">Add Large</button>
 </div>

@@ -4,7 +4,7 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 import { reducers } from './reducers';
-import { FaultModule } from './fault.module';
+import { ItemModule } from './item.module';
 
 import { AppComponent } from './app.component';
 import { ReadComponent } from './components/read/read.component';
@@ -23,7 +23,7 @@ import { environment as env } from '../environments/environment';
     BrowserModule,
     StoreModule.forRoot(reducers),
     !env.production ? StoreDevtoolsModule.instrument({ name: 'NgRx Book Store DevTools', }) : [],
-    FaultModule
+    ItemModule
   ],
   providers: [],
   bootstrap: [AppComponent]

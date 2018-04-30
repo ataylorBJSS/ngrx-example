@@ -4,8 +4,8 @@ import { Observable } from 'rxjs/Observable';
 import { UUID } from 'angular2-uuid';
 
 import { AppState } from '../../app.state';
-import { IFault } from '../../models/fault.model';
-import * as FaultActions from '../../actions/fault.actions';
+import { Item } from '../../models/item.model';
+import * as ItemActions from '../../actions/item.actions';
 
 @Component({
   selector: 'app-create',
@@ -20,9 +20,9 @@ export class CreateComponent {
     return UUID.UUID();
   }
 
-  addFault(section, name) {
+  addItem(name, size) {
     const id = this.generateUUID();
-    this.store.dispatch(new FaultActions.AddFault({ id, section, name }));
+    this.store.dispatch(new ItemActions.AddItem({ id, name, size }));
   }
 
 }

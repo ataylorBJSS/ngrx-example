@@ -1,9 +1,9 @@
-import { IFault } from './models/fault.model';
+import { Item } from './models/item.model';
 
 /**
  * Global AppState Interface
  */
 export interface AppState {
-  readonly faults: IFault[];
+  readonly sizes: Item[];
 }
 

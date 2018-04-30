@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StoreModule } from '@ngrx/store';
 
-import { reducer } from './reducers/fault.reducer';
+import { reducer } from './reducers/item.reducer';
 
 /**
  * Module defining fault features for the faults store
@@ -10,9 +10,9 @@ import { reducer } from './reducers/fault.reducer';
 @NgModule({
   imports: [
     CommonModule,
-    StoreModule.forFeature('faults', reducer)
+    StoreModule.forFeature('items', reducer)
   ],
   declarations: []
 })
-export class FaultModule { }
+export class ItemModule { }
 
