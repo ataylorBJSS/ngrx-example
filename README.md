@@ -14,15 +14,13 @@ I found this to be a simpler implementation of redux but still allowed a good le
 [github](https://github.com/ngrx/platform/tree/master/docs/store-devtools)
 Dev tools for rxjs-store
 
-## mgrx/entity
+## ngrx/entity
 
 [Github] (https://github.com/ngrx/platform/tree/master/docs/entity)
 Entity State adapter for managing record collections.
 
 This removes boilerplate code from your reducers by providing an adapter to performant functions.
 I'm not sure if the selectors are cached yet, it would make sense...right?
-
-
 
 ## Development server
 
