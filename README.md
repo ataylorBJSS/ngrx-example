@@ -10,6 +10,10 @@ RxJS powered state management for Angular applications, inspired by Redux
 
 I found this to be a simpler implementation of redux but still allowed a good level of explicity, immutablity and easier testing with pure functions.
 
+## ngrx/dev-tools
+[github](https://github.com/ngrx/platform/tree/master/docs/store-devtools)
+Dev tools for rxjs-store
+
 ## mgrx/entity
 
 [Github] (https://github.com/ngrx/platform/tree/master/docs/entity)

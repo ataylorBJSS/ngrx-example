@@ -1,13 +1,10 @@
 <div class="right" *ngIf="faults$">
-
   <h3>Faults</h3>
   <ul>
     <li *ngFor="let fault of faults$ | async">
-      <div (click)="delFault(fault.id)">
-        <p>Section: {{ fault.section }}</p>
-        <p>Name: {{ fault.name }}</p>
-      </div>
+      <p>Section: {{ fault.section }}</p>
+      <p>Name: {{ fault.name }}</p>
+      <button (click)="delFault(fault.id)">Delete</button>
     </li>
   </ul>
-
 </div>
