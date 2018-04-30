@@ -1,16 +1,29 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { reducers } from './reducers';
+import { FaultModule } from "./fault.module";
 
 import { AppComponent } from './app.component';
+import { ReadComponent } from './read/read.component';
+import { CreateComponent } from './create/create.component';
+
+import { environment as env } from '../environments/environment';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ReadComponent,
+    CreateComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    StoreModule.forRoot(reducers),
+    !env.production ? StoreDevtoolsModule.instrument({ name: 'NgRx Book Store DevTools', }) : [],
+    FaultModule
   ],
   providers: [],
   bootstrap: [AppComponent]
