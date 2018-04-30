@@ -3,8 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Store } from '@ngrx/store';
 import { IFault } from './../models/fault.model';
-import { selectAllFaults } from "./../reducers";
-import * as FaultActions from "./../actions/fault.actions";
+import { selectAllFaults } from './../reducers';
+import * as FaultActions from './../actions/fault.actions';
 import { AppState } from './../app.state';
 
 @Component({

@@ -6,7 +6,6 @@ import * as FaultActions from './../actions/fault.actions';
 import { Observable } from 'rxjs/Observable';
 
 import { UUID } from 'angular2-uuid';
-
 @Component({
   selector: 'app-create',
   templateUrl: './create.component.html',
