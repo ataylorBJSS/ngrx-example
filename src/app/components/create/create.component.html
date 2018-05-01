@@ -1,14 +1,20 @@
 <div class="left">
-  <label for="item">Item:</label>
-  <select name="item" id="item" #item>
-    <option value="t-shirt">T-Shirt</option>
-    <option value="shirt">Shirt</option>
-    <option value="jumper">Jumper</option>
-    <option value="coat">coat</option>
-  </select>
-  <br>
-  <label for="size">Size:</label>
-  <button (click)="addItem(item.value ,'s')">Add Small</button>
-  <button (click)="addItem(item.value ,'m')">Add Medium</button>
-  <button (click)="addItem(item.value ,'l')">Add Large</button>
+  <div>
+    <label for="item">Item:</label>
+    <select name="item" id="item" #item>
+      <option value="t-shirt">T-Shirt</option>
+      <option value="shirt">Shirt</option>
+      <option value="jumper">Jumper</option>
+      <option value="coat">coat</option>
+    </select>
+  </div>
+  <div>
+    <label for="size">Size:</label>
+    <select name="size" id="size" #size>
+      <option value="s">Small</option>
+      <option value="m">Medium</option>
+      <option value="l">Large</option>
+    </select>
+  </div>
+  <button (click)="addItem(item.value, size.value)">Add</button>
 </div>
