@@ -1,4 +1,4 @@
-<div class="left">
+<div class="left" style="width: 20%; border-right: 1px solid #ccc;">
   <div>
     <label for="item">Item:</label>
     <select name="item" id="item" #item>
@@ -16,5 +16,5 @@
       <option value="l">Large</option>
     </select>
   </div>
-  <button (click)="addItem(item.value, size.value)">Add</button>
+  <button style="float:right;" (click)="addItem(item.value, size.value)">Add</button>
 </div>

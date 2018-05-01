@@ -4,3 +4,12 @@ export interface Item {
   size: string;
   qty: number;
 }
+
+export function generateMockItem(): Item {
+  return {
+    id: '1',
+    name: 'top',
+    size: 'l',
+    qty: 1
+  };
+}

@@ -13,8 +13,10 @@
       <td>{{ item.size }}</td>
       <td>{{ item.qty }}</td>
       <td>
-        <button (click)="addOne(item)">Add one</button>
-        <button *ngIf="item.qty > 1" (click)="removeOne(item)">Remove one</button>
+        <div style="width:100px;">
+          <button (click)="addOne(item)">+</button>
+          <button *ngIf="item.qty > 1" (click)="removeOne(item)">-</button>
+        </div>
       </td>
       <td>
         <button (click)="delItem(item.id)">Delete</button>
