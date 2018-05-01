@@ -24,7 +24,7 @@ export function reducer(state: State = initialState, action: ItemActions.Actions
 
       if (existingId) {
         const id = existingId;
-        const qty = state.entities[existingId].qty += 1;
+        const qty = state.entities[existingId].qty + 1;
         return itemAdapter.upsertOne({ id, changes: { qty } }, state);
       }
       return itemAdapter.addOne(action.payload.item, state);
