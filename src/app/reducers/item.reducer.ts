@@ -15,6 +15,18 @@ export const initialState: State = itemAdapter.getInitialState();
 export function reducer(state: State = initialState, action: ItemActions.Actions) {
   switch (action.type) {
     case ItemActions.actionType.ADD_ITEM:
+      const newItem = action.payload.item;
+      // Find matching item
+      const existingId = Object.keys(state.entities).filter(key =>
+        state.entities[key].name === newItem.name
+        && state.entities[key].size === newItem.size
+      )[0];
+
+      if (existingId) {
+        const id = existingId;
+        const qty = state.entities[existingId].qty += 1;
+        return itemAdapter.upsertOne({ id, changes: { qty } }, state);
+      }
       return itemAdapter.addOne(action.payload.item, state);
     case ItemActions.actionType.REMOVE_ITEM:
       return itemAdapter.removeOne(action.payload.id, state);
